@@ -8,6 +8,7 @@ set :user, "kevin"
 set :use_sudo, false
 set :scm, "git"
 set :keep_releases, 5
+set :rvm_ruby_string, "2.3.1"
 
 
 default_run_options[:pty] = true
