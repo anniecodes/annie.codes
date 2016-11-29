@@ -1,6 +1,6 @@
 require 'sinatra/base'
 
-class AnnieCloud < Sinatra::Application
+class AnnieCodes < Sinatra::Application
   get "/" do
     erb :index
   end

@@ -1,9 +1,9 @@
-# Annie dot Cloud
+# annie.codes
 
 ## Getting started
 
 ```
-$ git clone https://github.com/annieclaudecote/annie.cloud.git
+$ git clone https://github.com/anniecodes/annie.codes.git
 $ bundle install
 $ bundle exec rackup
 ```
