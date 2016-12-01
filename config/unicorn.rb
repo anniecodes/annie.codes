@@ -6,7 +6,7 @@ shared_dir = "#{ project_dir }/shared"
 working_directory current_dir
 
 # Set unicorn options
-worker_processes 3
+worker_processes 2
 preload_app true
 timeout 30
 
