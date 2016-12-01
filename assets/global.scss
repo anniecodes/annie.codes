@@ -1,0 +1,37 @@
+// COLORS
+$color-base: #62381b;
+$beige: #f2efd9;
+$pink: #e2324b;
+$light-pink: #ee7d8f;
+$yellow: #e8d320;
+$orange: #f15c27;
+$green: #70c1b3;
+$blue: #2d948d;
+$light-blue: #69c8c3;
+
+// SPACING
+$spacing-default: 16px;
+$spacing-halved: $spacing-default / 2;
+
+html,
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  line-height: 1.4em;
+  color: $color-base;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+
+  svg {
+    cursor: pointer;
+  }
+}
+
+svg {
+  fill: currentColor;
+}

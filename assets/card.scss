@@ -1,0 +1,41 @@
+.card {
+  max-width: 600px;
+}
+
+.card__header {
+  padding: $spacing-default $spacing-default 0 $spacing-default;
+}
+
+.card__section {
+  padding: $spacing-default;
+}
+
+.card__footer {
+  padding: 0 $spacing-default $spacing-default $spacing-default;
+}
+
+@mixin rotate($type, $direction: left, $speed: slow, $x: 200px, $y: 200px) {
+  -webkit-transform: translate3d(0, 0, 0);
+  -webkit-transform-origin: $x $y;
+  @include _rotate-animation($direction, $speed, $type);
+}
+
+@mixin _rotate-animation($direction, $speed, $type) {
+  -webkit-transform: translate3d(0, 0, 0);
+  -webkit-animation: rotate-#{$direction} getSpeed($speed, $type) linear 0s infinite;
+}
+
+@for $i from 1 through 5 {
+  $direction: left;
+  $speed: really-fast;
+  #circle#{$i} {
+    @if $i % 2 == 1 {
+      $direction: right;
+      $speed: really-fast;
+    } @else {
+      $direction: left;
+      $speed: slow;
+    }
+    @include rotate(rabbit, $direction, $speed);
+  }
+}
