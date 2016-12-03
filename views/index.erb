@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-  <title>Annie-Claude Côté</title>
+  <title>Annie-Claude Côté &bull; Senior Software Developer</title>
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
   <link rel="stylesheet" href="stylesheet.css">
 </head>
@@ -12,39 +12,7 @@
 <body>
   <%= erb :svg %>
   <main class="layout">
-    <section class="card">
-      <header class="card__header">
-        <h1 class="title">Annie-Claude Côté</h1>
-        <p class="subtitle">Senior Software Developer</p>
-      </header>
-      <section class="card__section">
-        <p>Actively gives a shit about UX.</p>
-        <p>Works at Shopify based out of Ottawa, Ontario, Canada.</p>
-        <p>Serious about code quality, optimization and finding all the edge cases.</p>
-        <p>All of them.</p>
-      </section>
-      <footer class="card__footer">
-        <div class="social">
-          <div class="social__icons">
-            <a href="http://twitter.com/anniecodes" target="_blank" class="social__icon social__icon--twitter" aria-label="Twitter">
-              <svg><use xlink:href="#iconTwitter" /></svg>
-            </a>
-            <a href="https://ca.linkedin.com/in/anniecodes/en" target="_blank" class="social__icon social__icon--linkedin" aria-label="LinkedIn">
-              <svg><use xlink:href="#iconLinkedin" /></svg>
-            </a>
-            <a href="https://github.com/anniecodes" target="_blank" class="social__icon social__icon--github" aria-label="Github">
-              <svg><use xlink:href="#iconGithub" /></svg>
-            </a>
-            <a href="mailto:hello@annie.codes" class="social__icon social__icon--email" aria-label="Email">
-              <svg><use xlink:href="#iconEmail" /></svg>
-            </a>
-          </div>
-          <div class="social__text">
-            <p>I suck at social media but I'm good at my job. I promise.</p>
-          </div>
-        </div>
-      </footer>
-    </section>
+    <%= erb :index_content %>
   </main>
 </body>
 </html>
