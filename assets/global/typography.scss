@@ -1,0 +1,52 @@
+/*============================================================================
+  Base typography
+==============================================================================*/
+
+html {
+  font-size: ($base-font-size / $default-browser-font-size) * 100%;
+  text-size-adjust: 100%;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  @include text-style-body;
+  color: color(brown);
+  font-family: font-family();
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  -moz-transition: all .2s ease-in;
+  -o-transition: all .2s ease-in;
+  -webkit-transition: all .2s ease-in;
+  transition: all .2s ease-in;
+
+  &:hover {
+    color: color(blue);
+  }
+
+  svg {
+    cursor: pointer;
+  }
+}
+
+svg {
+  fill: currentColor;
+}
+
+/*============================================================================
+  Core styles
+==============================================================================*/
+
+.title {
+  @include text-style-title;
+}
+
+.subtitle {
+  @include text-style-subtitle;
+}

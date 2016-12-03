@@ -1,0 +1,24 @@
+/*============================================================================
+  Card
+==============================================================================*/
+
+.card {
+  max-width: 600px;
+}
+
+.card__header {
+  padding: spacing() spacing() 0 spacing();
+}
+
+.card__section {
+  padding: spacing();
+  @include vertical-rhythm(extra-tight);
+}
+
+.card__footer {
+  padding: 0 spacing() spacing() spacing();
+}
+
+
+
+

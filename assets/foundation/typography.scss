@@ -1,0 +1,86 @@
+/*============================================================================
+  Typography functions
+==============================================================================*/
+
+$font-family-data: (
+  base: #{ Montserrat, "Helvetica Neue", sans-serif },
+);
+
+/*============================================================================
+  Returns the font stack for a given family.
+
+  @param {String} $family - The key for the given family.
+  @return {Number} The font stack for the family.
+==============================================================================*/
+@function font-family($family: base) {
+  $fetched-value: map-get($font-family-data, $family);
+  @if $fetched-value != null {
+    @return $fetched-value;
+  } @else {
+    @error "Font family `#{$family}` not found. Available font families: #{available-names($font-family-data)}";
+  }
+}
+
+/*============================================================================
+  Core styles
+==============================================================================*/
+
+@mixin text-style-title {
+  font-size: rem(22px);
+  line-height: rem(28px);
+
+  @media screen and (min-width: breakpoint(display-text)) {
+    font-size: rem(32px);
+    line-height: rem(36px);
+  }
+}
+
+@mixin text-style-subtitle {
+  font-size: rem(14px);
+  line-height: rem(22px);
+  font-weight: 400;
+  text-transform: uppercase;
+
+  @media screen and (min-width: breakpoint(display-text)) {
+    font-size: rem(16px);
+    line-height: rem(24px);
+  }
+
+  // Enhance with true small caps where available. This is important for a11y.
+  // Older webkit has a false positive for small caps; we need to exclude it.
+  // @supports also hides this from a major IE 11 bug.
+  @supports (font-feature-settings: 'smcp') and (not (-webkit-font-feature-settings: 'smcp')) {
+    font-size: rem(14px);
+    text-transform: lowercase;
+    letter-spacing: initial;
+    font-feature-settings: 'smcp';
+    -webkit-font-feature-settings: 'smcp';
+    -moz-font-feature-settings: 'smcp';
+  }
+}
+
+@mixin text-style-body {
+  font-size: rem(14px);
+  line-height: rem(18px);
+  font-weight: 400;
+  text-transform: initial;
+  letter-spacing: initial;
+}
+
+@mixin text-style-footer {
+  font-size: rem(12px);
+  line-height: rem(16px);
+  font-weight: 400;
+  text-transform: initial;
+  letter-spacing: initial;
+}
+
+
+
+/*============================================================================
+  Emphasis
+==============================================================================*/
+
+@mixin text-emphasis-strong {
+  font-weight: 600;
+}
