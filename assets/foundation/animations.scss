@@ -1,0 +1,41 @@
+/*============================================================================
+  Animations
+==============================================================================*/
+
+$animation-speed-data: (
+  slower: 24s,
+  slow: 18s,
+  base: 12s,
+);
+
+/*============================================================================
+  Returns the animation speed.
+  @return {Number} The animation speed value.
+==============================================================================*/
+
+@function animation-speed($value: base) {
+  @return map-get($animation-speed-data, $value);
+}
+
+/*============================================================================
+  Rotate
+==============================================================================*/
+
+
+@keyframes rotate-right {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate-left {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}

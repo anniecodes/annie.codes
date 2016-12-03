@@ -1,10 +1,15 @@
+$content-max-width: 480px;
+
 * {
   box-sizing: border-box;
+  z-index: 1;
 }
 
 html,
 body {
+  position: relative;
   height: 100%;
+  overflow: hidden;
   background: radial-gradient(center, ellipse cover, #ffffff 0%, color(beige) 100%);
   background: -webkit-radial-gradient(center, ellipse cover, #ffffff 0%, color(beige) 100%);
   background: -moz-radial-gradient(center, ellipse cover, #ffffff 0%, color(beige) 100%);

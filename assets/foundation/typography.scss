@@ -3,7 +3,8 @@
 ==============================================================================*/
 
 $font-family-data: (
-  base: #{ Montserrat, "Helvetica Neue", sans-serif },
+  base: #{ 'Alegreya Sans', "Helvetica Neue", sans-serif },
+  small-caps: #{ 'Alegreya Sans SC', "Helvetica Neue", sans-serif },
 );
 
 /*============================================================================
@@ -26,42 +27,25 @@ $font-family-data: (
 ==============================================================================*/
 
 @mixin text-style-title {
-  font-size: rem(22px);
-  line-height: rem(28px);
+  font-size: rem(34px);
+  line-height: rem(38px);
 
   @media screen and (min-width: breakpoint(display-text)) {
-    font-size: rem(32px);
-    line-height: rem(36px);
+    font-size: rem(40px);
+    line-height: rem(44px);
   }
 }
 
 @mixin text-style-subtitle {
-  font-size: rem(14px);
-  line-height: rem(22px);
+  font-size: rem(18px);
+  line-height: rem(24px);
   font-weight: 400;
-  text-transform: uppercase;
-
-  @media screen and (min-width: breakpoint(display-text)) {
-    font-size: rem(16px);
-    line-height: rem(24px);
-  }
-
-  // Enhance with true small caps where available. This is important for a11y.
-  // Older webkit has a false positive for small caps; we need to exclude it.
-  // @supports also hides this from a major IE 11 bug.
-  @supports (font-feature-settings: 'smcp') and (not (-webkit-font-feature-settings: 'smcp')) {
-    font-size: rem(14px);
-    text-transform: lowercase;
-    letter-spacing: initial;
-    font-feature-settings: 'smcp';
-    -webkit-font-feature-settings: 'smcp';
-    -moz-font-feature-settings: 'smcp';
-  }
+  font-family: font-family(small-caps);
 }
 
 @mixin text-style-body {
-  font-size: rem(14px);
-  line-height: rem(18px);
+  font-size: rem(16px);
+  line-height: rem(20px);
   font-weight: 400;
   text-transform: initial;
   letter-spacing: initial;

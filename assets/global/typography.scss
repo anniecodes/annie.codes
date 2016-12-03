@@ -27,7 +27,7 @@ a {
   transition: all .2s ease-in;
 
   &:hover {
-    color: color(blue);
+    color: color(blue, light);
   }
 
   svg {

@@ -1,0 +1,81 @@
+/*============================================================================
+  Animated Circle Frame
+==============================================================================*/
+
+.animated-circle {
+  position: absolute;
+  overflow: hidden;
+  border-radius: 50%;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.animated-circle--1 {
+  border: 4px solid color(blue, light);
+}
+
+.animated-circle--2 {
+  border: 6px solid color(blue);
+  border-right-color: transparent;
+  animation-duration: animation-speed(slow);
+}
+
+.animated-circle--3 {
+  border: 5px solid color(yellow);
+}
+
+.animated-circle--4 {
+  border: 6px solid color(pink, light);
+  border-left-color: transparent;
+  border-bottom-color: transparent;
+  animation-duration: animation-speed(slower);
+}
+
+.animated-circle--5 {
+  border: 4px solid color(orange);
+  border-top-color: transparent;
+  animation-duration: animation-speed();
+}
+
+$circle-size-add: 0;
+$direction: right;
+$spacing-around: 90px;
+$circle-max-width: $content-max-width;
+
+@for $i from 1 through 5 {
+  $screen-size: 320px;
+  $circle-size: $screen-size + $spacing-around;
+
+  .animated-circle--#{$i} {
+    @if $i % 2 == 1 {
+      $direction: right;
+      $circle-size-add: $circle-size-add + 18px;
+    } @else {
+      $direction: left;
+      $circle-size-add: $circle-size-add + 24px;
+    }
+
+    $circle-size: $circle-size + $circle-size-add;
+
+    animation-name: rotate-#{$direction};
+    width: $circle-size;
+    height: $circle-size;
+    top: calc(50% - #{$circle-size / 2});
+    left: calc(50% - #{$circle-size / 2});
+
+    @while $screen-size < $circle-max-width {
+
+      $screen-size: $screen-size + $spacing-around / 2;
+
+      @media screen and (min-width: #{$screen-size}) {
+        $circle-size: $screen-size + $spacing-around;
+        $circle-size: $circle-size + $circle-size-add;
+        width: $circle-size;
+        height: $circle-size;
+        top: calc(50% - #{$circle-size / 2});
+        left: calc(50% - #{$circle-size / 2});
+      }
+    }
+  }
+}
+

@@ -3,8 +3,8 @@
 ==============================================================================*/
 
 .layout {
-  padding: spacing(tight);
-  height: 100vh;
+  height: 100%;
+  padding: spacing();
   display: flex;
   justify-content: center;
   align-items: center;
