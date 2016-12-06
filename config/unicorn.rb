@@ -3,6 +3,10 @@ project_dir = "/var/apps/annie.codes"
 current_dir = "#{ project_dir }/current"
 shared_dir = "#{ project_dir }/shared"
 
+before_exec do |server|
+  ENV["BUNDLE_GEMFILE"] = "#{ current_dir }/Gemfile"
+end
+
 working_directory current_dir
 
 # Set unicorn options
