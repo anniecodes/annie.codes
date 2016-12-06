@@ -1,0 +1,26 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <title>Annie-Claude Côté &bull; Senior Software Developer</title>
+    <%= erb :analytics %>
+    <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans|Alegreya+Sans+SC" rel="stylesheet">
+    <link rel="stylesheet" href="stylesheet.css">
+  </head>
+
+  <body>
+    <%= erb :social_icons_svgs %>
+    <div class="animated-circles">
+      <div class="animated-circle animated-circle--1"></div>
+      <div class="animated-circle animated-circle--2"></div>
+      <div class="animated-circle animated-circle--3"></div>
+      <div class="animated-circle animated-circle--4"></div>
+      <div class="animated-circle animated-circle--5"></div>
+    </div>
+    <main class="layout">
+      <%= yield %>
+    </main>
+  </body>
+</html>
