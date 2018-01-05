@@ -8,4 +8,8 @@ class AnnieCodes < Sinatra::Application
   get "/stylesheet.css" do
     scss :stylesheet, style: :expanded
   end
+
+  get "/ping" do
+    "OK"
+  end
 end
