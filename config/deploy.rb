@@ -5,7 +5,7 @@ set :application, 'anniecodes'
 set :repo_url, 'https://github.com/anniecodes/annie.codes.git'
 
 set :user, "deploy"
-set :rbenv_ruby, "2.3.1"
+set :rbenv_ruby, "2.5.3"
 
 # Default value for :linked_files is []
 # append :linked_files, 'config/database.yml', 'config/secrets.yml'
