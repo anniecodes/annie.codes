@@ -19,10 +19,5 @@ append :linked_dirs, 'log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'public/.wel
 # Default value for keep_releases is 5
 set :keep_releases, 5
 
-# Unicorn
-# set :unicorn_pid, -> { File.join(current_path, "tmp", "pids", "unicorn.pid") }
-set :unicorn_config_path, -> { File.join(current_path, "config", "unicorn.rb") }
-# set :unicorn_roles, -> { :app }
-# set :unicorn_options, -> { "" }
-# set :unicorn_rack_env, -> { fetch(:rails_env) == "development" ? "development" : "deployment" }
-# set :unicorn_restart_sleep_time, 3
+# Puma
+set :puma_user, 'deploy'
