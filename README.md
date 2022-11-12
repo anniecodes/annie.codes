@@ -9,3 +9,14 @@ $ bundle exec rackup
 ```
 
 Then visit [http://localhost:9292](http://localhost:9292).
+
+
+## Deploy
+
+On [fly.io](https://fly.io):
+
+```
+
+```
+fly deploy
+```
