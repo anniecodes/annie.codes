@@ -1,9 +1,6 @@
-source 'https://rubygems.org'
+source "https://rubygems.org"
+ruby "2.6.0"
 
-gem 'sinatra'
-gem 'puma'
-gem 'sass'
-gem 'capistrano', '3.6.1'
-gem 'capistrano-bundler'
-gem 'capistrano-rbenv'
-gem 'capistrano3-puma'
+gem "sinatra"
+gem "puma"
+gem "sass"
