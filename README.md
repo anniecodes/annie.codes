@@ -13,9 +13,7 @@ Then visit [http://localhost:9292](http://localhost:9292).
 
 ## Deploy
 
-On [fly.io](https://fly.io):
-
-```
+Continuously deploying on [fly.io](https://fly.io) with Github Actions, but deploy manually from working directory with:
 
 ```
 fly deploy
