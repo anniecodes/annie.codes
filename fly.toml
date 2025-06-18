@@ -1,6 +1,7 @@
 # fly.toml file generated for kmcphillips-annie-codes on 2022-11-12T11:00:13-05:00
 
 app = "kmcphillips-annie-codes"
+primary_region = "yyz"
 kill_signal = "SIGINT"
 kill_timeout = 5
 
